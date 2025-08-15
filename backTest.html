@@ -15,15 +15,23 @@
         let taskArray = [
             "learn todolist",
             "learn javascript",
-            "learn java"
+            "learn java",
+            "learn python",
+            "learn c++",
+            "learn c#",
+            "learn php",
+            "learn ruby",
         ]
-        tdl.addTask("learn Javascript");
+        
 
+        // add tasks to the todo list
         taskArray.forEach(task => {
             tdl.addTask(task)
         })
 
         tdl.tasks[0].edit("learn")
+        tdl.tasks[1].toggleCompletion()
+
         tdl.display();
         
     </script>

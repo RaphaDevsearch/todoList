@@ -13,6 +13,6 @@ export default class Task {
     }
 
     display(){
-        console.log(`->${this.description}, Completed: ${this.completed}`);    
+        console.log(`${this.description},${this.completed}`);    
     }
 }
