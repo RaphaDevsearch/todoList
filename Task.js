@@ -1,22 +1,18 @@
-class task {
+export default class Task {
     constructor(description) {
         this.description    = description;
-        this.completed      = false;
+        this.completed      = false;    // by default, a task is not completed
     }
 
     toggleCompletion(){
         this.completed = !this.completed;
     }
 
-    getStatus(){
-        return this.completed ? "Completed" : "Pending";
-    }
-
-    getDescription(){
-        return this.description;
-    }
-
     edit(updateDescription){
         this.description = updateDescription;
+    }
+
+    display(){
+        console.log(`->${this.description}, Completed: ${this.completed}`);    
     }
 }

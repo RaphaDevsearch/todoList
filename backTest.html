@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test back</title>
+  </head>
+  <body>
+    <script type="module">
+        import TodoList  from './todoList.js';
+        
+
+        // main : test
+        let tdl = new TodoList();
+        let taskArray = [
+            "learn todolist",
+            "learn javascript",
+            "learn java"
+        ]
+        tdl.addTask("learn Javascript");
+
+        taskArray.forEach(task => {
+            tdl.addTask(task)
+        })
+
+        tdl.tasks[0].edit("learn")
+        tdl.display();
+        
+    </script>
+  </body>
+</html>
