@@ -1,9 +1,13 @@
-import {TodoList} from './todoList'
-document.addEventListener("DOMContentLoaded", () => {
-    const taskList = document.getElementById("taskList");
-    // taskList.innerHTML = "";
+import TodoList from './TodoList.js';
 
-    // Example tasks
-    const todoList = new TodoList();
+const taskList = document.getElementById('taskList');
 
-});
+
+let tdl = new TodoList();
+
+tdl.addTask("Buy groceries");
+tdl.addTask("Walk the dog");
+
+taskList.innerHTML = ''; // Clear existing tasks
+
+tdl.display()
